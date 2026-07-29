@@ -1,60 +1,135 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>連連看 — 隱私政策</title>
-<style>
-  body { font-family: -apple-system, "Segoe UI", "Microsoft JhengHei", sans-serif;
-         line-height: 1.8; max-width: 780px; margin: 0 auto; padding: 24px 20px 80px;
-         color: #1a1a1a; background: #fff; }
-  h1 { font-size: 1.6rem; border-bottom: 3px solid #4CAF50; padding-bottom: 10px; }
-  h2 { font-size: 1.2rem; margin-top: 32px; color: #2E7D32; }
-  .updated { color: #666; font-size: 0.9rem; }
-  ul { padding-left: 22px; }
-  li { margin: 6px 0; }
-  a { color: #4CAF50; }
-  hr { border: none; border-top: 1px solid #eee; margin: 40px 0; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隱私權政策 - 極速連連看：有雯才敢大聲</title>
+    <style>
+        body { font-family: -apple-system, "Segoe UI", "Microsoft JhengHei", sans-serif;
+               line-height: 1.8; max-width: 780px; margin: 0 auto; padding: 24px 20px 80px;
+               color: #1a1a1a; background: #fff; }
+        h1 { font-size: 1.6rem; color: #ec4899; border-bottom: 3px solid #ec4899; padding-bottom: 10px; }
+        h2 { font-size: 1.2rem; margin-top: 32px; color: #be185d; }
+        .updated { color: #666; font-size: 0.9rem; }
+        ul { padding-left: 22px; margin-bottom: 20px; }
+        li { margin: 6px 0; }
+        a { color: #3b82f6; }
+        .back-btn {
+            display: inline-block; background-color: #ec4899; color: white;
+            padding: 10px 20px; text-decoration: none; border-radius: 8px;
+            font-weight: bold; margin-bottom: 20px; cursor: pointer; border: none;
+        }
+        .back-btn:hover { background-color: #db2777; }
+        .en { color: #555; font-size: 0.92rem; }
+        hr { border: none; border-top: 1px solid #eee; margin: 40px 0; }
+    </style>
 </head>
 <body>
+    <button onclick="window.location.href='/'" class="back-btn">← 返回遊戲</button>
 
-<h1>連連看 隱私政策</h1>
-<p class="updated">最後更新：2026 年 7 月 30 日</p>
+    <h1>隱私權政策</h1>
+    <p class="updated">最後更新：2026 年 7 月 21 日</p>
 
-<p>「連連看」（以下稱「本 App」）是由獨立開發者提供的休閒益智遊戲。我們非常重視您的隱私，本政策說明本 App 如何處理您的資料。</p>
+    <p>歡迎使用「極速連連看：有雯才敢大聲」（以下簡稱「本應用」）。本應用由獨立開發者提供，我們非常重視您的隱私權。本隱私權政策將說明我們如何收集、使用、儲存與保護您的個人資訊。</p>
 
-<h2>一、我們不收集個人身分資料</h2>
-<ul>
-  <li>本 App <strong>不需要註冊帳號</strong>、不建立使用者檔案。</li>
-  <li><strong>不收集</strong>姓名、電話、Email 等個人身分資訊。</li>
-  <li><strong>不投放廣告</strong>、不使用任何廣告或行為追蹤 SDK。</li>
-  <li>不會將您的資料販售或分享給第三方。</li>
-</ul>
+    <h2>一、我們收集的資訊</h2>
+    <p>為了提供遊戲服務，我們會收集以下資訊：</p>
+    <ul>
+        <li><strong>帳戶資訊：</strong>當您註冊或登入時，我們會收集您的電子郵件地址、自訂暱稱，以及由 Firebase Authentication 產生的唯一識別碼（UID）。您也可以使用 Google 帳號登入或以訪客模式遊玩。</li>
+        <li><strong>遊戲數據：</strong>您的遊戲進度、關卡紀錄、分數、成就、角色好感度、道具庫存、裝備、VIP 等級、購買紀錄及個人設定偏好，均儲存於 Google Cloud Firestore 雲端資料庫。</li>
+        <li><strong>購買紀錄：</strong>透過 Google Play 計費服務進行的應用程式內購買（IAP），其交易驗證由伺服器端 Cloud Functions 處理。我們儲存訂單編號（Order ID）、商品編號及購買時間戳記，用於防止重複發放與退款處理。<strong>我們不會接觸或儲存您的信用卡號碼或付款資訊</strong>——所有付款處理均由 Google Play 負責。</li>
+        <li><strong>對戰數據：</strong>參與對戰模式時，您的對戰操作記錄（配對時序）會暫時儲存於 Firestore，供對手重播比對使用。</li>
+        <li><strong>裝置資訊：</strong>我們可能收集非識別性的技術資訊（如作業系統版本、螢幕尺寸），僅用於優化遊戲體驗與相容性處理。</li>
+    </ul>
 
-<h2>二、資料儲存於您的裝置本機</h2>
-<ul>
-  <li>您的遊戲進度、設定偏好、最高分數等資料，皆<strong>儲存在您的裝置本機</strong>。</li>
-  <li>這些內容<strong>不會上傳</strong>到我們的伺服器。</li>
-</ul>
+    <h2>二、第三方服務</h2>
+    <p>本應用使用以下第三方服務，這些服務各自依循其隱私權政策處理資料：</p>
+    <ul>
+        <li><strong>Google Firebase：</strong>身份驗證（Authentication）、雲端資料庫（Firestore）、雲端函式（Cloud Functions）、主機代管（Hosting）。請參閱 <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase 隱私權政策</a>。</li>
+        <li><strong>Google Play 計費服務：</strong>處理應用程式內購買（鑽石包、月卡、禮包等）。所有付款資訊由 Google Play 管理，本應用僅接收交易驗證結果。請參閱 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隱私權政策</a>。</li>
+        <li><strong>Google AdMob：</strong>本應用可能展示獎勵式廣告（觀看廣告獲取體力或道具）。AdMob 可能使用廣告識別碼（Advertising ID）提供相關廣告。您可透過裝置設定管理廣告追蹤偏好。請參閱 <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google 廣告隱私權條款</a>。</li>
+        <li><strong>Firebase Crashlytics：</strong>收集匿名當機診斷資訊（裝置型號、作業系統版本、當機堆疊），<strong>不包含</strong>可識別個人身分的資料，僅用於穩定性改善。</li>
+    </ul>
 
-<h2>三、App 使用的權限與用途</h2>
-<ul>
-  <li><strong>網路</strong>：本 App 可能在必要時連接網路以進行當機診斷回報。此連線<strong>不會傳送您的個人身分資料</strong>。</li>
-</ul>
+    <h2>三、離線快取與 Service Worker</h2>
+    <p>本應用採用 PWA（漸進式網頁應用程式）技術，透過 Service Worker 在您的裝置本機快取遊戲資源（程式碼、圖片、音效），以提供離線遊玩能力與加速載入體驗。這些快取資料<strong>僅儲存在您的裝置上</strong>，不會回傳至伺服器。您可隨時透過瀏覽器設定清除快取資料。</p>
 
-<h2>四、當機診斷（Crash Reports）</h2>
-<p>為維持 App 穩定，本 App 可能收集匿名的當機診斷資訊（如裝置型號、作業系統版本、當機堆疊）。這些資訊<strong>不包含</strong>可識別個人身分的資料。</p>
+    <h2>四、資料使用方式</h2>
+    <p>我們收集的資訊僅用於以下用途：</p>
+    <ul>
+        <li>驗證您的身份並確保帳戶安全。</li>
+        <li>儲存與同步您的遊戲進度，讓您能跨裝置遊玩。</li>
+        <li>驗證應用程式內購買的合法性，防止偽造與重複發放。</li>
+        <li>維護排行榜、對戰配對與賽季結算功能。</li>
+        <li>發送遊戲內通知（全域公告、月卡每日獎勵）。</li>
+        <li>分析遊戲使用情況以改善功能與修復錯誤。</li>
+    </ul>
 
-<h2>五、兒童隱私</h2>
-<p>本 App 並非針對 13 歲以下兒童設計，我們不會刻意收集兒童的個人資料。</p>
+    <h2>五、資料安全</h2>
+    <ul>
+        <li>所有資料傳輸均透過 HTTPS 加密。</li>
+        <li>您的密碼由 Firebase Authentication 加密處理，我們無法讀取您的原始密碼。</li>
+        <li>應用程式內購買透過伺服器端 Cloud Functions 驗證 Google Play 收據真偽，防止偽造交易。</li>
+        <li>Firestore 安全規則限制每位用戶僅能讀寫自己的遊戲資料，並設有防竄改閘門。</li>
+    </ul>
 
-<h2>六、政策變更</h2>
-<p>本政策如有更新，將於本頁面公布並更新上方「最後更新」日期。</p>
+    <h2>六、您的權利</h2>
+    <ul>
+        <li><strong>存取與更正：</strong>您可在遊戲內的「個人檔案」頁面查看並修改您的暱稱與頭像。</li>
+        <li><strong>資料匯出：</strong>如需取得您的遊戲數據副本，請透過下方聯絡方式與我們聯繫。</li>
+        <li><strong>帳戶刪除：</strong>如果您希望刪除帳戶及所有相關遊戲數據，請發送電子郵件至 <a href="mailto:dead1786@gmail.com">dead1786@gmail.com</a>，標題註明「帳號刪除申請」並附上您的註冊信箱或 UID，我們將在 30 個工作日內完成刪除處理。刪除後，您的遊戲進度、購買紀錄、排行榜資料將永久移除且無法恢復。</li>
+    </ul>
 
-<hr>
+    <h2>七、兒童隱私</h2>
+    <p>本應用並非針對 13 歲以下兒童設計。我們不會刻意收集兒童的個人資料。若您發現有未滿 13 歲兒童在未經家長同意的情況下提供了個人資料，請聯繫我們，我們將立即刪除相關資料。</p>
 
-<p>如有任何疑問，請透過 Google Play 商店頁面與我們聯絡。</p>
+    <h2>八、政策更新</h2>
+    <p>我們可能會不時更新本隱私權政策。更新後的政策將公佈於本頁面，並更新上方「最後更新」日期。重大變更時，我們將透過遊戲內公告通知。</p>
+
+    <h2>九、聯絡我們</h2>
+    <p>如果您對本隱私權政策有任何疑問，請來信：<a href="mailto:dead1786@gmail.com">dead1786@gmail.com</a></p>
+
+    <hr>
+
+    <h1>Privacy Policy</h1>
+    <p class="updated en">Last updated: July 21, 2026</p>
+
+    <p class="en">"極速連連看：有雯才敢大聲" (Speed Match: Wen's Challenge) is a tile-matching puzzle game provided by an independent developer. We value your privacy and are committed to protecting your personal information.</p>
+
+    <h2 class="en">Information We Collect</h2>
+    <ul class="en">
+        <li><strong>Account information:</strong> Email address, display name, and Firebase Authentication UID upon registration or login. Guest mode is available without registration.</li>
+        <li><strong>Game data:</strong> Progress, scores, achievements, character affinity, inventory, equipment, VIP status, and purchase history — stored in Google Cloud Firestore.</li>
+        <li><strong>Purchase records:</strong> In-app purchase transactions are verified server-side via Cloud Functions. We store Order IDs and product IDs for fraud prevention. <strong>We never access or store your payment card information</strong> — all payment processing is handled by Google Play.</li>
+        <li><strong>Device information:</strong> Non-identifying technical data (OS version, screen size) for compatibility optimization.</li>
+    </ul>
+
+    <h2 class="en">Third-Party Services</h2>
+    <ul class="en">
+        <li><strong>Google Firebase:</strong> Authentication, Firestore, Cloud Functions, Hosting. See <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy Policy</a>.</li>
+        <li><strong>Google Play Billing:</strong> Handles in-app purchases. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</li>
+        <li><strong>Google AdMob:</strong> May display rewarded ads. See <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google Ads Privacy</a>.</li>
+        <li><strong>Firebase Crashlytics:</strong> Anonymous crash diagnostics only — no personal data.</li>
+    </ul>
+
+    <h2 class="en">Data Security</h2>
+    <ul class="en">
+        <li>All data transmitted via HTTPS encryption.</li>
+        <li>Passwords handled by Firebase Authentication (hashed, never stored in plaintext).</li>
+        <li>Firestore security rules restrict each user to their own data with anti-tampering safeguards.</li>
+    </ul>
+
+    <h2 class="en">Your Rights</h2>
+    <ul class="en">
+        <li><strong>Access & correction:</strong> Modify your nickname and avatar in-game.</li>
+        <li><strong>Account deletion:</strong> Email <a href="mailto:dead1786@gmail.com">dead1786@gmail.com</a> with subject "Account Deletion Request" and your registered email or UID. We will process within 30 business days. Deletion is permanent and irreversible.</li>
+    </ul>
+
+    <h2 class="en">Children's Privacy</h2>
+    <p class="en">This app is not directed to children under 13. We do not knowingly collect personal data from children.</p>
+
+    <h2 class="en">Contact</h2>
+    <p class="en">Questions about this policy: <a href="mailto:dead1786@gmail.com">dead1786@gmail.com</a></p>
 
 </body>
 </html>
